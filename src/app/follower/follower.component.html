@@ -1,0 +1,16 @@
+
+<div class="container-fluid">
+  <div class="row text-white">
+    <div class="col-sm-12 p-5">
+      <div>
+        <h1>Followers</h1>
+      </div>
+      <div *ngFor="let follow of followers" class="mt-4">
+        <div class="border border-white d-flex justify-content-between p-3">
+          <div class="p-2"><h2>{{follow.follower.email}}</h2></div>
+          <div class="p-2"><button class="btn btn-dark " (click)="viewProfile(follow.follower.userId)">Open Profile</button></div>
+        </div>
+      </div>
+  </div>
+</div>
+</div>

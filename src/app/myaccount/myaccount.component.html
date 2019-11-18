@@ -1,0 +1,71 @@
+<app-navbar></app-navbar>
+
+
+
+
+
+
+
+
+
+<div class="container-fluid env">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="m-5 p-4 border border-white bg-dark">
+        <h1 class="text-center text-white p-2">User Details</h1>
+        <div>
+          <h3 class="text-white">Profile Name:</h3>
+          <h6 class="text-white">{{temp}}</h6>
+        </div>
+        <div>
+          <h3 class="text-white">Profile Username:</h3>
+          <h6 class="text-white">{{user.userName}}</h6>
+        </div>
+        <div>
+          <h3 class="text-white">User Email:</h3>
+          <h6 class="text-white">{{temp1}}</h6>
+        </div>
+        <div>
+          <h2 class="text-white">Contact No.:</h2>
+          <h5 class="text-white">{{temp3}}</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-7 text-white">
+      <div class="p-3">
+        <h3 class="pt-3">Update Details</h3><hr>
+
+        <form>
+
+          <div class="form-group ">
+            <div>
+              <label>Edit Name :</label>
+            </div>
+            <input type="text" class="form-control" id="name" placeholder="{{user.name}}" name="name" value="{{user.name}}" [(ngModel)]="user.name">
+          </div>
+          <div class="form-group">
+            <div>
+              <label>Edit Email :</label>
+            </div>
+            <input type="email" class="form-control" id="uname" placeholder="{{user.email}}" value="{{user.email}}" name="email" [(ngModel)]="user.email">
+          </div>
+          <div class="form-group">
+            <div>
+              <label>Edit Password :</label>
+            </div>
+            <input type="password" class="form-control" id="pwd" placeholder="Edit Password(its not your password)" name="pswd" [(ngModel)]="user.password">
+          </div>
+          <div class="form-group">
+            <div>
+              <label>Edit Mobile Number :</label>
+            </div>
+            <input type="text" class="form-control" id="number" placeholder="{{user.phoneNumber}}" name="mob" value="{{user.phoneNumber}}" [(ngModel)]="user.phoneNumber">
+          </div>
+          <button type="submit" class="btn btn-light mt-5 mb-5 w-100" (click)="editUser()">Edit Details</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+

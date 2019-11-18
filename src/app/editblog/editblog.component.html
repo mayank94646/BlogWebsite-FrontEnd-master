@@ -1,0 +1,26 @@
+
+<app-navbar></app-navbar>
+
+<div class="container-fluid ww">
+  <div class="row p-5">
+    <div class="col-sm-4 text-center border-right border-white">
+      <p class="qq">Edit Your Blog</p>
+    </div>
+    <div class="col-sm-8">
+      <form class="form-group">
+        <div>
+          <label class="as">Title</label>
+          <div>
+            <input class="ys" type="text" [(ngModel)]="blog.title" placeholder="Title of blog"  name="name">
+          </div>
+        </div>
+        <div>
+          <label class="as">Enter Content here</label>
+          <textarea placeholder="Write your blog here" name="mess" [(ngModel)]="blog.content" type="text" class="form-control vv"></textarea>
+        </div>
+        <button (click)="editBlog()" class="btn btn-dark mt-2">Edit Blog</button>
+        <button (click)="deleteBlog()" class="btn btn-dark mt-2 ml-3">Delete Blog</button>
+      </form>
+    </div>
+  </div>
+</div>

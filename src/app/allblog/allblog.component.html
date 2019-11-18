@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+<div class="d-flex flex-wrap col-sm-11 mt-3 ml-5" style="border:  1px solid lightgray; border-radius:1rem;">
+  <div *ngFor="let b of blogs"  style="margin-top: 30px;margin-left: 30px ;margin-bottom:30px" >
+    <div class="bg-white m-2 shadow  pl-3 mb-4" style="background-color: #00c6ff">
+      <div class="d-flex m-3">
+        <div>
+          <div style="font-size: 20px;">{{b.title}}</div>
+          <small class="ml-5">By {{b.author}}</small>
+        </div>
+        <div class="ml-5">
+          <div>
+            <small class="text-dark">{{b.date | date:'shortDate'}}</small>
+          </div>
+        </div>
+      </div>
+      <hr style="color: #00c6ff">
+      <p class="pb-3">{{b.content}}</p>
+      <button class="btn btn-danger mb-3" routerLink="/profile" (click)="deleteBlog(b.blogId)">Delete Blog</button>
+
+    </div>
+  </div>
+</div>
